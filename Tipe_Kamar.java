@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 class Tipe_Kamar {
     private String namaTipe;
-    private List<String> fasilitas;
+    private static List<String> fasilitas;
     private int kapasitas;
 
     public Tipe_Kamar(String namaTipe, List<String> fasilitas, int kapasitas) {
@@ -24,7 +24,7 @@ class Tipe_Kamar {
         return kapasitas;
     }
 
-    public String getFasilitasString() {
+    public static String getFasilitasString() {
         return String.join(", ", fasilitas);
     }
 

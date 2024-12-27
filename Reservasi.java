@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+
 class Reservasi {
     Pelanggan pelanggan;
     Kamar kamar;
@@ -23,5 +24,17 @@ class Reservasi {
 
     public boolean validasiReservasi() {
         return !tanggalCheckin.isAfter(tanggalCheckout);
+    }
+
+    // Method to get reservation details as a string
+    public String getDetails() {
+        return "Nama: " + pelanggan.getNama() + "\n" +
+                "Alamat: " + pelanggan.alamat + "\n" +
+                "Email: " + pelanggan.email + "\n" +
+                "Kamar: " + kamar.tipeKamar + "\n" +
+                "Tanggal Check-in: " + tanggalCheckin + "\n" +
+                "Tanggal Check-out: " + tanggalCheckout + "\n" +
+                "Total Biaya: " + totalBiaya + "\n" +
+                "Status: " + statusReservasi + "\n";
     }
 }
